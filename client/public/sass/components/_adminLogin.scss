@@ -1,6 +1,22 @@
 .adminLogin {
+    padding: 10rem;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+
+    &__form-group {
+        border: none;
+    }
+
+    &__label {
+        margin-right: 0.7rem;
+    }
+
+    &__input {
+        margin-bottom: 1rem;
+    }
 
     &__alert {
-        
+        color: $color-red;
     }
 }

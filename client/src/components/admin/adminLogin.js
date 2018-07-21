@@ -5,7 +5,6 @@ import * as actions from '../../actions';
 class adminLogin extends Component {
     handleFormSubmit({ username, password }) {
         console.log(username, password);
-
         this.props.signinAdmin({ username, password });
     }
 
@@ -26,13 +25,14 @@ class adminLogin extends Component {
         return (
             <div className='adminLogin'>
                 <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+                    <h1 className='heading-primary heading-primary--main'>Admin Login</h1>
                     <fieldset className='adminLogin__form-group'>
-                        <label for='adminLogin__username' className='adminLogin__label'>Username</label>
-                        <input {...username} type='text' className='adminLogin__username' required />
+                        <label className='adminLogin__label'>Username</label>
+                        <input {...username} type='text' className='adminLogin__input' required />
                     </fieldset>
                     <fieldset className='adminLogin__form-group'>
-                        <label for='adminLogin__password' className='adminLogin__label'>Password</label>
-                        <input {...username} type='password' className='adminLogin__username' required />
+                        <label className='adminLogin__label'>Password</label>
+                        <input {...username} type='password' className='adminLogin__input' required />
                     </fieldset>
                     {this.renderAlert()}
                     <button action='submit' className='btn btn--orange'>Sign In</button>
