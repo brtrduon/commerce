@@ -115,12 +115,12 @@ body {
   width: 40%;
   text-align: center;
   margin: auto; }
-  .adminLogin__form-group {
-    border: none; }
-  .adminLogin__label {
-    margin-right: 0.7rem; }
   .adminLogin__input {
-    margin-bottom: 1rem; }
+    display: block;
+    height: 2rem;
+    width: 17.5rem;
+    margin: auto auto 1rem auto;
+    border-radius: 0.3rem; }
   .adminLogin__alert {
     color: #cd0000; }
 

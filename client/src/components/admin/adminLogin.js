@@ -1,40 +1,41 @@
 import React, {Component} from 'react';
 import { reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
 class adminLogin extends Component {
-    handleFormSubmit({ username, password }) {
-        console.log(username, password);
-        this.props.signinAdmin({ username, password });
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            username: '',
+            password: ''
+        };
+
+        this.onSubmit = this.onSubmit.bind(this);
+        this.onChange = this.onChange.bind(this);
     }
 
-    renderAlert() {
-        if (this.props.errorMessage) {
-            return (
-                <div className='adminLogin__alert'>
-                    {this.props.errorMessage}
-                </div>
-            );
-        }
+    onSubmit(e) {
+        e.preventDefault();
+        this.props.signinAdmin(this.state);
+    }
+
+    onChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
     }
 
     render() {
-        const { handleSubmit, fields: { username, password }} = this.props;
-        // handleSubmit is a helper from redux-form
+        const { username, password } = this.state;
 
         return (
             <div className='adminLogin'>
-                <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+                <form onSubmit={this.onSubmit} >
                     <h1 className='heading-primary heading-primary--main'>Admin Login</h1>
-                    <fieldset className='adminLogin__form-group'>
-                        <label className='adminLogin__label'>Username</label>
-                        <input {...username} type='text' className='adminLogin__input' required />
-                    </fieldset>
-                    <fieldset className='adminLogin__form-group'>
-                        <label className='adminLogin__label'>Password</label>
-                        <input {...username} type='password' className='adminLogin__input' required />
-                    </fieldset>
-                    {this.renderAlert()}
+                    <input className='adminLogin__input' name='username' placeholder='Username' value={username} onChange={this.onChange} required />
+                    <input className='adminLogin__input' name='password' type='password' placeholder='Password' value={password} onChange={this.onChange} required />
                     <button action='submit' className='btn btn--orange'>Sign In</button>
                 </form>
             </div>
@@ -42,13 +43,10 @@ class adminLogin extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        errorMessage: state.auth.error
-    };
-}
+// function mapStateToProps(state) {
+//     return {
+//         errorMessage: state.auth.error
+//     };
+// }
 
-export default reduxForm({
-    form: 'signin',
-    fields: ['username', 'password']
-}, mapStateToProps, actions)(adminLogin);
+export default connect(null, actions)(adminLogin);
