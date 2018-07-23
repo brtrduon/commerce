@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
@@ -27,6 +27,16 @@ class adminLogin extends Component {
         });
     }
 
+    renderAlert() {
+        if (this.props.errorMessage) {
+            return (
+                <div className='alert'>
+                    {this.props.errorMessage}
+                </div>
+            );
+        }
+    }
+
     render() {
         const { username, password } = this.state;
 
@@ -43,10 +53,10 @@ class adminLogin extends Component {
     }
 }
 
-// function mapStateToProps(state) {
-//     return {
-//         errorMessage: state.auth.error
-//     };
-// }
+function mapStateToProps(state) {
+    return {
+        errorMessage: state.auth.error
+    };
+}
 
-export default connect(null, actions)(adminLogin);
+export default connect(mapStateToProps, actions)(adminLogin);

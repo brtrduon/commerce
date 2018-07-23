@@ -10,11 +10,10 @@ export function signinAdmin({ username, password }) {
             .then(response => {
                 dispatch({ type: AUTH_USER });
                 localStorage.setItem('token', response.data.token);
-                dispatch.push('https://facebook.com');
+                dispatch.push('/admin/dash');
             })
             .catch(() => {
                 dispatch(AUTH_ERROR('Invalid login combination'));
             });
-    };
-    
+    }; 
 }
