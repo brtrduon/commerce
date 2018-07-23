@@ -7,32 +7,32 @@ const adminSchema = new Schema({
     password: String
 });
 
-adminSchema.pre('save', (next) => {
+adminSchema.pre('save', function(next) {
     const admin = this;
 
-    bcrypt.genSalt(10, (err, salt) => {
+    bcrypt.genSalt(10, function(err, salt) {
         if (err) {
             return next(err);
         };
 
-        bcrypt.hash(admin.password, salt, null, (err, hash) => {
+        bcrypt.hash(admin.password, salt, null, function(err, hash) {
             if (err) {
                 return next(err);
             }
-
+            console.log(hash);
             admin.password = hash;
             next();
         });
     });
 });
 
-adminSchema.methods.comparePassword = (candidatePassword, cb) => {
-    bcrypt.compare(candidatePassword, this.password, (err, isMatch) => {
+adminSchema.methods.comparePassword = function(candidatePassword, cb) {
+    bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
         if (err) {
             return cb(err);
         };
 
-        callback(null, isMatch);
+        cb(null, isMatch);
     });
 };
 

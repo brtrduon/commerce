@@ -4,8 +4,8 @@ const jwt = require('jwt-simple');
 
 function token(admin) {
     const timestamp = new Date().getTime();
+
     // console.log(admin);
-    console.log('pewp');
     return jwt.encode({
         sub: admin.id,
         iat: timestamp
@@ -13,7 +13,6 @@ function token(admin) {
 };
 
 exports.signin = function(req, res, next) {
-    console.log('pewp');
     res.send({
         token: token(req.admin)
     });

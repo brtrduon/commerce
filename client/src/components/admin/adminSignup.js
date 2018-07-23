@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
-class adminLogin extends Component {
+class adminSignup extends Component {
     constructor(props) {
         super(props);
 
@@ -17,7 +18,7 @@ class adminLogin extends Component {
 
     onSubmit(e) {
         e.preventDefault();
-        this.props.signinAdmin(this.state);
+        this.props.signupAdmin(this.state);
     }
 
     onChange(e) {
@@ -29,7 +30,7 @@ class adminLogin extends Component {
     renderAlert() {
         if (this.props.errorMessage) {
             return (
-                <div className='adminLogin__alert'>
+                <div className='alert'>
                     {this.props.errorMessage}
                 </div>
             );
@@ -42,11 +43,10 @@ class adminLogin extends Component {
         return (
             <div className='adminLogin'>
                 <form onSubmit={this.onSubmit} >
-                    <h1 className='heading-primary heading-primary--main'>Admin Login</h1>
-                    {this.renderAlert()}
+                    <h1 className='heading-primary heading-primary--main'>Admin Signup</h1>
                     <input className='adminLogin__input' name='username' placeholder='Username' value={username} onChange={this.onChange} required />
                     <input className='adminLogin__input' name='password' type='password' placeholder='Password' value={password} onChange={this.onChange} required />
-                    <button action='submit' className='btn btn--orange'>Sign In</button>
+                    <button action='submit' className='btn btn--orange'>Sign Up</button>
                 </form>
             </div>
         );
@@ -59,4 +59,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps, actions)(adminLogin);
+export default connect(mapStateToProps, actions)(adminSignup);

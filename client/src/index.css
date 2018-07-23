@@ -122,7 +122,8 @@ body {
     margin: auto auto 1rem auto;
     border-radius: 0.3rem; }
   .adminLogin__alert {
-    color: #cd0000; }
+    color: #cd0000;
+    margin-bottom: 0.5rem; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;

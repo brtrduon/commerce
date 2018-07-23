@@ -8,7 +8,7 @@ const requireSignin = passport.authenticate('local', { session: false });
 module.exports = (app) => {
     app.post('/signin', requireSignin, Admins.signin);
 
-    app.post('/signup', Admins.signup);
+    // app.post('/signup', Admins.signup);
 
     app.get('*', (req, res) => {
         res.redirect('http://localhost:3006');

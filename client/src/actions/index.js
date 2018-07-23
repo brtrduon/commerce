@@ -7,13 +7,32 @@ const ROOT_URL = 'http://localhost:8008';
 export function signinAdmin({ username, password }) {
     return function(dispatch) {
         axios.post(`${ROOT_URL}/signin`, { username, password })
-            .then(response => {
+            .then(res => {
                 dispatch({ type: AUTH_USER });
-                localStorage.setItem('token', response.data.token);
-                dispatch.push('/admin/dash');
+                localStorage.setItem('token', res.data.token);
+                dispatch(push('/admin/dash'));
             })
             .catch(() => {
-                dispatch(AUTH_ERROR('Invalid login combination'));
+                dispatch(authError('Invalid login combination'));
             });
     }; 
+}
+
+export function signupAdmin({ username, password }) {
+    return function(dispatch) {
+        axios.post(`${ROOT_URL}/signup`, { username, password })
+            .then(res => {
+                dispatch({ type: AUTH_USER });
+                localStorage.setItem('token', res.data.token);
+                dispatch(push('/admin/dash'));
+            })
+            .catch(res => dispatch(authError(res.data.error)));
+    }
+}
+
+export function authError(error) {
+    return {
+        type: AUTH_ERROR,
+        payload: error
+    }
 }

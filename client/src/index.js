@@ -7,6 +7,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import App from './components/views/App';
 import adminLogin from './components/admin/adminLogin';
+// import adminSignup from './components/admin/adminSignup';
 import Dash from './components/admin/dash';
 import './index.css';
 
@@ -27,6 +28,7 @@ ReactDOM.render(
             <div>
                 <Route exact path='/' component={App} />
                 <Route exact path='/admin' component={adminLogin} />
+                {/* <Route exact path='/admin/signup' component={adminSignup} /> */}
                 <Route path='/admin/dash' component={Dash} />
             </div> 
         </BrowserRouter>
