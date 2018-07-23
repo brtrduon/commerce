@@ -17,7 +17,9 @@ class adminLogin extends Component {
 
     onSubmit(e) {
         e.preventDefault();
-        this.props.signinAdmin(this.state);
+        this.props.signinAdmin(this.state, () => {
+            this.props.history.push('/admin/dash')
+        });
     }
 
     onChange(e) {

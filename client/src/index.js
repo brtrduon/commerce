@@ -9,7 +9,6 @@ import App from './components/views/App';
 
 import adminLogin from './components/admin/adminLogin';
 // import adminSignup from './components/admin/adminSignup';
-import RequireAuth from './components/admin/require_auth';
 import Dash from './components/admin/dash';
 import Signout from './components/admin/signout';
 
@@ -17,8 +16,11 @@ import './index.css';
 import reducers from './reducers';
 import { AUTH_USER } from './actions/types';
 
-const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
-const store = createStoreWithMiddleware(reducers);
+const store = createStore(
+    reducers,
+    {},
+    applyMiddleware(reduxThunk)
+);
 
 const token = localStorage.getItem('token');
 if (token) {
@@ -32,7 +34,7 @@ ReactDOM.render(
                 <Route exact path='/' component={App} />
                 <Route exact path='/admin' component={adminLogin} />
                 {/* <Route exact path='/admin/signup' component={adminSignup} /> */}
-                <Route path='/admin/dash' component={RequireAuth(Dash)} />
+                <Route path='/admin/dash' component={Dash} />
                 <Route path='/signout' component={Signout} />
             </div> 
         </BrowserRouter>

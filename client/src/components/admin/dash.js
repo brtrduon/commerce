@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import requireAuth from './requireAuth';
 
 class Dash extends Component {
     render() {
@@ -11,4 +12,4 @@ class Dash extends Component {
     }
 }
 
-export default Dash;
+export default requireAuth(Dash);

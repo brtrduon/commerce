@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import * as actions from '../../actions';
 
 class Signout extends Component {
-    componentWillMount() {
-        this.props.signoutUser;
+    componentDidMount() {
+        this.props.signoutUser();
     }
 
     render() {
-        return <div>crack</div>
-    }
+        return <Redirect to='/admin' />
+    };
 }
 
 export default connect(null, actions)(Signout);
