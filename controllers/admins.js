@@ -1,11 +1,10 @@
-const Admin = require('../models/admin');
-const config = require('../config');
 const jwt = require('jwt-simple');
+const config = require('../config');
+const Admin = require('../models/admin');
 
 function token(admin) {
     const timestamp = new Date().getTime();
 
-    // console.log(admin);
     return jwt.encode({
         sub: admin.id,
         iat: timestamp
@@ -13,8 +12,10 @@ function token(admin) {
 };
 
 exports.signin = function(req, res, next) {
+    // console.log(req.admin);
     res.send({
-        token: token(req.admin)
+        token: token(req.user)
+        // why I have to put 'req.user' instead of 'req.admin', i have no clue
     });
 };
 

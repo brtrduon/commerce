@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 class Dash extends Component {
     render() {
         return (
-            <h1>admin dashboard</h1>
+            <div>
+                <h1>admin dashboard</h1>
+                <a href='/signout'>Sign out</a>
+            </div>
         )
     }
 }

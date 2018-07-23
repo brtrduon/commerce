@@ -9,8 +9,8 @@ export function signinAdmin({ username, password }) {
         axios.post(`${ROOT_URL}/signin`, { username, password })
             .then(res => {
                 dispatch({ type: AUTH_USER });
-                localStorage.setItem('token', res.data.token);
-                dispatch(push('/admin/dash'));
+                localStorage.setItem('token', res.data.token)
+                .push('/admin/dash');
             })
             .catch(() => {
                 dispatch(authError('Invalid login combination'));
@@ -35,4 +35,12 @@ export function authError(error) {
         type: AUTH_ERROR,
         payload: error
     }
+}
+
+export function signoutUser() {
+    localStorage.removeItem('token');
+
+    return {
+        type: UNAUTH_USER
+    };
 }

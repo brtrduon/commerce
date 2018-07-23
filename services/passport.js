@@ -37,8 +37,6 @@ const jwtOptions = {
 
 const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done) {
     Admin.findById(payload.sub, function(err, admin) {
-        console.log(admin);
-        console.log('CRAAAAAAACK');
         if (err) {
             return done(err, false);
         }
