@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import Navigation from '../layout/navigation';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+      <Navigation />
         <h1>test</h1>
       </div>
     );
