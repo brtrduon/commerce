@@ -1,0 +1,22 @@
+.sidebar {
+    &__item {
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-black;
+        font-weight: 600;
+        font-family: "Trebuchet MS";
+    }
+
+    &__link:hover {
+        color: $color-primary;
+        background-color: $color-white;
+        transition: all 0.15s;
+    }
+}
+
+.active {
+    color: $color-primary;
+}

@@ -38,6 +38,10 @@ body {
   padding: 3rem;
   background-color: #f7f7f7; }
 
+::selection {
+  background-color: #ff6600;
+  color: white; }
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -185,6 +189,23 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.sidebar__item {
+  list-style: none; }
+
+.sidebar__link {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-family: "Trebuchet MS"; }
+
+.sidebar__link:hover {
+  color: #ff6600;
+  background-color: white;
+  transition: all 0.15s; }
+
+.active {
+  color: #ff6600; }
 
 .row {
   max-width: 114rem;

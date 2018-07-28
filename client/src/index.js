@@ -8,6 +8,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import App from './components/views/App';
 
 import './index.css';
+import Navigation from './components/layout/navigation';
 import reducers from './reducers';
 
 const store = createStore(
@@ -20,7 +21,8 @@ ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
             <div>
-                <Route exact path='/' component={App} />
+                <Navigation />
+                <Route path='/' component={App} />
             </div> 
         </BrowserRouter>
     </Provider>,
