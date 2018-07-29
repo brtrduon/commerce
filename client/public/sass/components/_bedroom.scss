@@ -1,0 +1,31 @@
+.bedroom {
+    width: 70%;
+    float: right;
+    
+    &__details {
+        background-color: $color-white;
+        height: 70vh;
+        margin: 10% 0;
+
+        & img, &__text {
+            display: inline-block;
+        }
+
+        & img {
+            height: 70%;
+        }
+
+        &__text {
+            float: right;
+        }
+    }
+    
+    &__description {
+        height: 100vh;
+
+    }
+
+    &__customtab {
+        height: 100vh;
+    }
+}

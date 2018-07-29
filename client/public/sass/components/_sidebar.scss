@@ -1,6 +1,13 @@
 .sidebar {
+    width: 16%;
+    position: fixed;
+    top: 30%;
+    text-align: right;
+    z-index: 9999;
+
     &__item {
         list-style: none;
+        margin: 14% 0;
     }
 
     &__link {

@@ -8,13 +8,12 @@
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
+  // padding: 3rem;
   background-image: linear-gradient(
     to right bottom,
     rgba($color-grey-light-1, 0.8),
     rgba($color-grey-dark, 0.8)
   );
-  height: 100vh;
 }
 
 ::selection {
