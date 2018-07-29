@@ -6,9 +6,11 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import App from './components/views/App';
+import Bedroom from './components/views/bedroom/bedroom';
+import Livingroom from './components/views/livingroom/livingroom';
+import Office from './components/views/office/office';
 
 import './index.css';
-import Navigation from './components/layout/navigation';
 import reducers from './reducers';
 
 const store = createStore(
@@ -20,10 +22,12 @@ const store = createStore(
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
-            <div>
-                <Navigation />
-                <Route path='/' component={App} />
-            </div> 
+            <App>
+                <Route exact path='/' component={Bedroom} />
+                <Route exact path='/bedroom' component={Bedroom} />
+                <Route exact path='/livingroom' component={Livingroom} />
+                <Route exact path='/office' component={Office} />
+            </App> 
         </BrowserRouter>
     </Provider>,
     document.getElementById('root')

@@ -7,7 +7,7 @@ const route = require('./route');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-mongoose.connect('mongodb://localhost/commerce');
+// mongoose.connect('mongodb://localhost/commerce');
 
 app.use(morgan('combined'));
 app.use(bodyParser.json());
