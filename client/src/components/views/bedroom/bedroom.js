@@ -16,21 +16,32 @@ class Bedroom extends Component {
     return (
       <div className='section-bedroom'>
         <ul className='sidebar'>
-              <li className='sidebar__item'>
-                <a href='#details' className='sidebar__link'>DETAILS</a>
-              </li>
-              <li className='sidebar__item'>
-                <a href='#description' className='sidebar__link'>DESCRIPTION</a>
-              </li>
-              <li className='sidebar__item'>
-                <a href='#customtab' className='sidebar__link'>CUSTOM TAB</a>
-              </li>
-            </ul>
+          <li className='sidebar__item'>
+            <a href='#details' className='sidebar__link'>DETAILS</a>
+          </li>
+          <li className='sidebar__item'>
+            <a href='#description' className='sidebar__link'>DESCRIPTION</a>
+          </li>
+          <li className='sidebar__item'>
+            <a href='#customtab' className='sidebar__link'>CUSTOM TAB</a>
+          </li>
+        </ul>
         <div className="bedroom">
             <div id='details' className='bedroom__details'>
               <img src='./../../../img/bedroom.jpg' alt='bedroom.jpg' />
               <div className='bedroom__details__text'>
                 <h1>Nudie Extendable Sofa for 3 persons.</h1>
+                <h3 className='bedroom__details__price'><s>$169</s>$149</h3>
+                <div className='bedroom__details__assembly'>
+                  <ul>
+                    <li>
+                      <b>ASSEMBLY</b>: Carpenter Assembly
+                    </li>
+                    <li>
+                      <b>WARRANTY</b>: 12 Months' Warrant
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div id='description' className='bedroom__description'>

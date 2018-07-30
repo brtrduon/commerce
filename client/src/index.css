@@ -45,7 +45,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #999; }
+  color: black; }
 
 .heading-primary {
   font-family: 'Lato', sans-serif;
@@ -120,14 +120,26 @@ body {
   float: right; }
   .bedroom__details {
     background-color: white;
-    height: 70vh;
-    margin: 10% 0; }
-    .bedroom__details img, .bedroom__details__text {
-      display: inline-block; }
+    height: 80vh;
+    margin: 10% 0;
+    overflow: hidden; }
     .bedroom__details img {
-      height: 70%; }
+      width: 50%;
+      position: relative;
+      top: 22%; }
     .bedroom__details__text {
-      float: right; }
+      width: 50%;
+      float: right;
+      padding: 5rem 1rem 3rem 2rem; }
+    .bedroom__details__price {
+      padding: 1rem 0;
+      color: black; }
+    .bedroom__details__assembly {
+      width: 20rem;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 1rem;
+      font-size: 0.8rem; }
   .bedroom__description {
     height: 100vh; }
   .bedroom__customtab {
@@ -211,14 +223,12 @@ body {
   width: 16%;
   position: fixed;
   top: 30%;
-  text-align: right;
-  z-index: 9999; }
+  text-align: right; }
   .sidebar__item {
     list-style: none;
     margin: 14% 0; }
   .sidebar__link {
     text-decoration: none;
-    color: black;
     font-weight: 600;
     font-family: "Trebuchet MS";
     font-size: 0.8rem; }

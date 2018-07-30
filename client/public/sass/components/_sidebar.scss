@@ -3,7 +3,6 @@
     position: fixed;
     top: 30%;
     text-align: right;
-    z-index: 9999;
 
     &__item {
         list-style: none;
@@ -12,7 +11,6 @@
 
     &__link {
         text-decoration: none;
-        color: $color-black;
         font-weight: 600;
         font-family: "Trebuchet MS";
         font-size: $font-size-small;

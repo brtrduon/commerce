@@ -4,19 +4,34 @@
     
     &__details {
         background-color: $color-white;
-        height: 70vh;
+        height: 80vh;
+        // padding: 1rem 3rem;
         margin: 10% 0;
-
-        & img, &__text {
-            display: inline-block;
-        }
+        overflow: hidden;
 
         & img {
-            height: 70%;
+            width: 50%;
+            position: relative;
+            top: 22%;
         }
 
         &__text {
+            width: 50%;
             float: right;
+            padding: 5rem 1rem 3rem 2rem;
+        }
+
+        &__price {
+            padding: 1rem 0;
+            color: $color-black;
+        }
+
+        &__assembly {
+            width: 20rem;
+            border-top: 1px solid $color-grey-light-2;
+            border-bottom: 1px solid $color-grey-light-2;
+            padding: 1rem;
+            font-size: $font-size-small;
         }
     }
     
