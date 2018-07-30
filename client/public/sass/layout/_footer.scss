@@ -1,0 +1,36 @@
+.footer {
+    background-color: $color-tertiary-light;
+    padding-left: 5rem;
+
+    &__title {
+        width: 40%;
+        text-align: center;
+        border-bottom: 1px solid $color-grey-light-1;
+        margin: 0 auto;
+    }
+
+    &__nav {
+        padding-top: 2rem;
+        display: inline-block;
+    }
+    
+    &__list {
+        list-style: none;
+        border-top: 1px solid $color-grey-light-1;
+    }
+    
+    &__item {
+        display: inline-block;
+        padding-right: 1.5rem;
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: $color-black;
+        font-size: $font-size-small;
+    }
+
+    &__copyright {
+
+    }
+}

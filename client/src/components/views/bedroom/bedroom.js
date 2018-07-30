@@ -47,7 +47,7 @@ class Bedroom extends Component {
             <div id='description' className='bedroom__description'>
               <img src='./../../../img/bedroom1.jpg' alt='bedroom1.jpg' />
               <h1 className='bedroom__description__title'><span className='bedroom__description__title-span'>At vero eos et accusamus et iusto odio dignissimos.</span></h1>
-              <p className='bedroom__description__paragraph'>
+              <p className='bedroom__description__paragraph bedroom__description__paragraph--1'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
               <p className='bedroom__description__paragraph'>
@@ -57,6 +57,31 @@ class Bedroom extends Component {
             <div id='related' className='bedroom__related'>
               <h1>Related</h1>
             </div>
+          <div className='footer'>
+            <h1 className='footer__title'>Footer text</h1>
+            <div className='row'>
+              <div className='col-1-of-2'>
+                <div className='footer__nav'>
+                  <ul className='footer__list'>
+                    <li className='footer__item'>
+                      <a href='/bedroom' className='footer__link'>BEDROOM</a>
+                    </li>
+                    <li className='footer__item'>
+                      <a href='/livingroom' className='footer__link'>LIVING ROOM</a>
+                    </li>
+                    <li className='footer__item'>
+                      <a href='/office' className='footer__link'>OFFICE</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className='col-1-of-2'>
+                <p className='footer__copyright'>
+                  All images are property of their respective owners
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

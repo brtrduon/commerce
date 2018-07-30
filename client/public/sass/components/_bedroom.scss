@@ -46,6 +46,7 @@
     &__description {
         height: 100vh;
         overflow: hidden;
+        // padding-bottom: 10rem;
 
         & img {
             height: 70vh;
@@ -71,10 +72,13 @@
         }
 
         &__paragraph {
-            
             width: 25%;
-            font-size: 0.9;
+            font-size: 0.85rem;
             padding-top: 2rem;
+
+            &--1 {
+                padding-top: 9rem;
+            }
         }
     }
 
