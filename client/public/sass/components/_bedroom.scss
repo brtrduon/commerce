@@ -1,18 +1,22 @@
 .bedroom {
-    width: 70%;
+    position: relative;
+    width: 75%;
     float: right;
+    margin: auto;
     
     &__details {
         background-color: $color-white;
         height: 80vh;
         // padding: 1rem 3rem;
         margin: 10% 0;
-        overflow: hidden;
+        // overflow: hidden;
 
         & img {
             width: 50%;
             position: relative;
-            top: 22%;
+            top: 17vh;
+            right: 3.5%;
+            // margin: auto 0;
         }
 
         &__text {
@@ -21,9 +25,13 @@
             padding: 5rem 1rem 3rem 2rem;
         }
 
+        &__title {
+            width: 50%;
+        }
+
         &__price {
             padding: 1rem 0;
-            color: $color-black;
+            word-spacing: 0.3rem;
         }
 
         &__assembly {
@@ -37,10 +45,40 @@
     
     &__description {
         height: 100vh;
+        overflow: hidden;
 
+        & img {
+            height: 70vh;
+            width: 70%;
+            float: right;
+            z-index: 1;
+        }
+
+        &__title {
+            position: relative;
+            width: 40%;
+            display: block;
+            
+            &-span {
+                background-image: linear-gradient(
+                    to right,
+                    rgba($color-white, 1),
+                    rgba($color-grey-light-1, 1)
+                );
+                position: absolute;
+                padding: 0.5rem 2rem 1.5rem 0;
+            }
+        }
+
+        &__paragraph {
+            
+            width: 25%;
+            font-size: 0.9;
+            padding-top: 2rem;
+        }
     }
 
-    &__customtab {
+    &__related {
         height: 100vh;
     }
 }

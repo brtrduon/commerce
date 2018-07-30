@@ -35,7 +35,7 @@
 
 body {
   box-sizing: border-box;
-  background-image: linear-gradient(to right bottom, rgba(247, 247, 247, 0.8), rgba(119, 119, 119, 0.8)); }
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(247, 247, 247, 0.8)); }
 
 ::selection {
   background-color: #ff6600;
@@ -116,24 +116,28 @@ body {
   margin-top: 10rem !important; }
 
 .bedroom {
-  width: 70%;
-  float: right; }
+  position: relative;
+  width: 75%;
+  float: right;
+  margin: auto; }
   .bedroom__details {
     background-color: white;
     height: 80vh;
-    margin: 10% 0;
-    overflow: hidden; }
+    margin: 10% 0; }
     .bedroom__details img {
       width: 50%;
       position: relative;
-      top: 22%; }
+      top: 17vh;
+      right: 3.5%; }
     .bedroom__details__text {
       width: 50%;
       float: right;
       padding: 5rem 1rem 3rem 2rem; }
+    .bedroom__details__title {
+      width: 50%; }
     .bedroom__details__price {
       padding: 1rem 0;
-      color: black; }
+      word-spacing: 0.3rem; }
     .bedroom__details__assembly {
       width: 20rem;
       border-top: 1px solid #eee;
@@ -141,8 +145,26 @@ body {
       padding: 1rem;
       font-size: 0.8rem; }
   .bedroom__description {
-    height: 100vh; }
-  .bedroom__customtab {
+    height: 100vh;
+    overflow: hidden; }
+    .bedroom__description img {
+      height: 70vh;
+      width: 70%;
+      float: right;
+      z-index: 1; }
+    .bedroom__description__title {
+      position: relative;
+      width: 40%;
+      display: block; }
+      .bedroom__description__title-span {
+        background-image: linear-gradient(to right, white, #f7f7f7);
+        position: absolute;
+        padding: 0.5rem 2rem 1.5rem 0; }
+    .bedroom__description__paragraph {
+      width: 25%;
+      font-size: 0.9;
+      padding-top: 2rem; }
+  .bedroom__related {
     height: 100vh; }
 
 .btn, .btn:link, .btn:visited {

@@ -28,7 +28,7 @@ class Livingroom extends Component {
                 <a href='#description' className='sidebar__link'>DESCRIPTION</a>
               </li>
               <li className='sidebar__item'>
-                <a href='#customtab' className='sidebar__link'>CUSTOM TAB</a>
+                <a href='#related' className='sidebar__link'>RELATED</a>
               </li>
             </ul>
         </div>

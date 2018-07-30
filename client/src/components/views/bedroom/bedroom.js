@@ -23,15 +23,15 @@ class Bedroom extends Component {
             <a href='#description' className='sidebar__link'>DESCRIPTION</a>
           </li>
           <li className='sidebar__item'>
-            <a href='#customtab' className='sidebar__link'>CUSTOM TAB</a>
+            <a href='#related' className='sidebar__link'>RELATED</a>
           </li>
         </ul>
         <div className="bedroom">
             <div id='details' className='bedroom__details'>
               <img src='./../../../img/bedroom.jpg' alt='bedroom.jpg' />
               <div className='bedroom__details__text'>
-                <h1>Nudie Extendable Sofa for 3 persons.</h1>
-                <h3 className='bedroom__details__price'><s>$169</s>$149</h3>
+                <h1 className='bedroom__details__title'>Nudie Extendable Sofa for 3 persons.</h1>
+                <h3 className='bedroom__details__price'><s>$169</s> $149</h3>
                 <div className='bedroom__details__assembly'>
                   <ul>
                     <li>
@@ -45,10 +45,17 @@ class Bedroom extends Component {
               </div>
             </div>
             <div id='description' className='bedroom__description'>
-              <h1>description</h1>
+              <img src='./../../../img/bedroom1.jpg' alt='bedroom1.jpg' />
+              <h1 className='bedroom__description__title'><span className='bedroom__description__title-span'>At vero eos et accusamus et iusto odio dignissimos.</span></h1>
+              <p className='bedroom__description__paragraph'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p className='bedroom__description__paragraph'>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+              </p>
             </div>
-            <div id='customtab' className='bedroom__customtab'>
-              <h1>Custom tab</h1>
+            <div id='related' className='bedroom__related'>
+              <h1>Related</h1>
             </div>
         </div>
       </div>
