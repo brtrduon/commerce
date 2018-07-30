@@ -6,12 +6,8 @@
         width: 40%;
         text-align: center;
         border-bottom: 1px solid $color-grey-light-1;
-        margin: 0 auto;
-    }
-
-    &__nav {
-        padding-top: 2rem;
-        display: inline-block;
+        margin: 0 auto 7rem auto;
+        padding: 10rem 0 1rem 0;
     }
     
     &__list {
@@ -21,16 +17,25 @@
     
     &__item {
         display: inline-block;
-        padding-right: 1.5rem;
+        padding: 2rem 1.5rem 2rem 0;
     }
     
-    &__link {
+    &__link, &__link:visited {
         text-decoration: none;
         color: $color-black;
         font-size: $font-size-small;
+        font-weight: 700;
+        transition: all 0.2s;
+
+        &:hover {
+            color: $color-primary;
+        }
     }
 
     &__copyright {
-
+        border-top: 1px solid $color-grey-light-1;
+        padding-top: 2rem;
+        margin: 0 auto;
+        text-align: right;
     }
 }

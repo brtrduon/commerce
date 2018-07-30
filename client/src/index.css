@@ -311,19 +311,27 @@ body {
     width: 40%;
     text-align: center;
     border-bottom: 1px solid #f7f7f7;
-    margin: 0 auto; }
-  .footer__nav {
-    padding-top: 2rem;
-    display: inline-block; }
+    margin: 0 auto 7rem auto;
+    padding: 10rem 0 1rem 0; }
   .footer__list {
     list-style: none;
     border-top: 1px solid #f7f7f7; }
   .footer__item {
     display: inline-block;
-    padding-right: 1.5rem; }
-  .footer__link {
+    padding: 2rem 1.5rem 2rem 0; }
+  .footer__link, .footer__link:visited {
     text-decoration: none;
-    color: black; }
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: all 0.2s; }
+    .footer__link:hover, .footer__link:visited:hover {
+      color: #ff6600; }
+  .footer__copyright {
+    border-top: 1px solid #f7f7f7;
+    padding-top: 2rem;
+    margin: 0 auto;
+    text-align: right; }
 
 .navigation__checkbox {
   display: none; }

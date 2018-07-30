@@ -61,7 +61,6 @@ class Bedroom extends Component {
             <h1 className='footer__title'>Footer text</h1>
             <div className='row'>
               <div className='col-1-of-2'>
-                <div className='footer__nav'>
                   <ul className='footer__list'>
                     <li className='footer__item'>
                       <a href='/bedroom' className='footer__link'>BEDROOM</a>
@@ -73,7 +72,6 @@ class Bedroom extends Component {
                       <a href='/office' className='footer__link'>OFFICE</a>
                     </li>
                   </ul>
-                </div>
               </div>
               <div className='col-1-of-2'>
                 <p className='footer__copyright'>
