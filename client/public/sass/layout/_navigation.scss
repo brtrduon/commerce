@@ -81,6 +81,11 @@
         }
     }
 
+    &__link--full {
+        color: $color-black;
+        font-weight: 700;
+    }
+
     // functionality
     &__checkbox:checked ~ &__background {
         transform: scale(80);

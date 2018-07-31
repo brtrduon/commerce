@@ -58,7 +58,7 @@ class Bedroom extends Component {
               <h1>Related</h1>
             </div>
           <div className='footer'>
-            <h1 className='footer__title'>Footer text</h1>
+            <h1 className='footer__title'>FURNISHING YOUR DREAMS</h1>
             <div className='row'>
               <div className='col-1-of-2'>
                   <ul className='footer__list'>

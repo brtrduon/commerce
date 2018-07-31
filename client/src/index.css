@@ -312,7 +312,7 @@ body {
     text-align: center;
     border-bottom: 1px solid #f7f7f7;
     margin: 0 auto 7rem auto;
-    padding: 10rem 0 1rem 0; }
+    padding: 5rem 0 1rem 0; }
   .footer__list {
     list-style: none;
     border-top: 1px solid #f7f7f7; }
@@ -400,6 +400,10 @@ body {
   background-position: 100%;
   color: #ff6600;
   transform: translateX(1rem); }
+
+.navigation__link--full {
+  color: black;
+  font-weight: 700; }
 
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80); }
