@@ -8,8 +8,19 @@ class Bedroom extends Component {
 
   jQuery() {
     $(document).ready(() => {
+      $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
 
-    })
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').animate({
+            'scrollTop': $target.offset().top - 75
+        }, 1600, 'swing');
+      });
+    });
+
+    
   }
 
   render() {

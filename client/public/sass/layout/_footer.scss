@@ -7,7 +7,9 @@
         text-align: center;
         border-bottom: 1px solid $color-grey-light-1;
         margin: 0 auto 7rem auto;
-        padding: 5rem 0 1rem 0;
+        padding: 5rem 0 1.5rem 0;
+        font-size: 1.8rem;
+        font-weight: 700;
     }
     
     &__list {
@@ -37,5 +39,6 @@
         padding-top: 2rem;
         margin: 0 auto;
         text-align: right;
+        font-family: arial;
     }
 }

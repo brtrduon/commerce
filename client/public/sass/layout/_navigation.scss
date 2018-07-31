@@ -1,4 +1,7 @@
 .navigation {
+    display: none;
+    // remove the display none above to display mobile
+
     &__checkbox {
         display: none;
     }
@@ -84,6 +87,11 @@
     &__link--full {
         color: $color-black;
         font-weight: 700;
+
+        &:hover {
+            color: $color-primary;
+            background-color: $color-grey-light-1;
+        }
     }
 
     // functionality

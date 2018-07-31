@@ -7,16 +7,13 @@
     &__details {
         background-color: $color-white;
         height: 80vh;
-        // padding: 1rem 3rem;
         margin: 10% 0;
-        // overflow: hidden;
 
         & img {
             width: 50%;
             position: relative;
             top: 17vh;
             right: 3.5%;
-            // margin: auto 0;
         }
 
         &__text {
@@ -46,7 +43,6 @@
     &__description {
         height: 100vh;
         overflow: hidden;
-        // padding-bottom: 10rem;
 
         & img {
             height: 70vh;
