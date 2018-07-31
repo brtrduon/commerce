@@ -6,13 +6,13 @@
     
     &__details {
         background-color: $color-white;
-        height: 80vh;
-        margin: 10% 0;
+        height: 95vh;
+        margin: 12rem 0;
 
         & img {
             width: 50%;
             position: relative;
-            top: 17vh;
+            top: 21vh;
             right: 3.5%;
         }
 
@@ -70,11 +70,11 @@
         &__paragraph {
             width: 25%;
             font-size: 0.85rem;
-            padding-top: 2rem;
-
-            &--1 {
-                padding-top: 9rem;
-            }
+            margin-top: 23rem;
+            
+            // &--1 {
+            //     margin-top: 19rem;
+            // }
         }
     }
 

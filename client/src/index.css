@@ -122,12 +122,12 @@ body {
   margin: auto; }
   .bedroom__details {
     background-color: white;
-    height: 80vh;
-    margin: 10% 0; }
+    height: 95vh;
+    margin: 12rem 0; }
     .bedroom__details img {
       width: 50%;
       position: relative;
-      top: 17vh;
+      top: 21vh;
       right: 3.5%; }
     .bedroom__details__text {
       width: 50%;
@@ -163,9 +163,7 @@ body {
     .bedroom__description__paragraph {
       width: 25%;
       font-size: 0.85rem;
-      padding-top: 2rem; }
-      .bedroom__description__paragraph--1 {
-        padding-top: 9rem; }
+      margin-top: 23rem; }
   .bedroom__related {
     height: 100vh; }
 
