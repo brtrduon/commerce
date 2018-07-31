@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import WhenInView from './../../WhenInView/WhenInView';
 
 class Bedroom extends Component {
   componentDidMount() {
@@ -8,6 +9,18 @@ class Bedroom extends Component {
 
   jQuery() {
     $(document).ready(() => {
+      $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+    
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+    
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+      };
+
+
+
       $('a[href^="#"]').on('click', function(e) {
         e.preventDefault();
 
@@ -20,7 +33,15 @@ class Bedroom extends Component {
       });
     });
 
-    
+    $(window).scroll(() => {
+      if ($('#related').isInViewport()) {
+        $('.sidebar__link--related').addClass('active');
+      }
+      else {
+        $('.sidebar__link--related').removeClass('active');
+      }
+    })
+
   }
 
   render() {
@@ -28,13 +49,13 @@ class Bedroom extends Component {
       <div className='section-bedroom'>
         <ul className='sidebar'>
           <li className='sidebar__item'>
-            <a href='#details' className='sidebar__link'>DETAILS</a>
+            <a href='#details' className='sidebar__link sidebar__link--details'>DETAILS</a>
           </li>
           <li className='sidebar__item'>
-            <a href='#description' className='sidebar__link'>DESCRIPTION</a>
+            <a href='#description' className='sidebar__link sidebar__link--description'>DESCRIPTION</a>
           </li>
           <li className='sidebar__item'>
-            <a href='#related' className='sidebar__link'>RELATED</a>
+            <a href='#related' className='sidebar__link sidebar__link--related'>RELATED</a>
           </li>
         </ul>
         <div className="bedroom">
