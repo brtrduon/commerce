@@ -152,15 +152,26 @@ body {
         .bedroom__details__title {
           width: 100%;
           font-size: 3.4rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .bedroom__details__title {
+          font-size: 2.4rem;
+          line-height: 2.8rem; } }
     .bedroom__details__price {
       padding: 1rem 0;
       word-spacing: 0.3rem; }
+      @media only screen and (max-width: 37.5em) {
+        .bedroom__details__price {
+          font-size: 1.5rem;
+          padding-bottom: 1.2rem; } }
     .bedroom__details__assembly {
       width: 20rem;
       border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
       padding: 1rem;
       font-size: 0.8rem; }
+      @media only screen and (max-width: 75em) {
+        .bedroom__details__assembly {
+          width: 15rem; } }
   .bedroom__description {
     height: 100vh;
     overflow: hidden; }
@@ -174,18 +185,43 @@ body {
           height: 40vh;
           width: 100%;
           float: none; } }
+      @media only screen and (max-width: 37.5em) {
+        .bedroom__description img {
+          height: 25vh;
+          width: 100%; } }
     .bedroom__description__title {
       position: relative;
       width: 40%;
       display: block; }
+      @media only screen and (max-width: 75em) {
+        .bedroom__description__title {
+          width: 100%; } }
       .bedroom__description__title-span {
         background-image: linear-gradient(to right, white, #f7f7f7);
         position: absolute;
         padding: 0.5rem 2rem 1.5rem 0; }
+        @media only screen and (max-width: 75em) {
+          .bedroom__description__title-span {
+            font-size: 3rem;
+            background-image: none;
+            padding: 0; } }
+        @media only screen and (max-width: 37.5em) {
+          .bedroom__description__title-span {
+            font-size: 2.3rem;
+            line-height: 3rem; } }
     .bedroom__description__paragraph {
       width: 25%;
       font-size: 0.85rem;
       margin-top: 23rem; }
+      @media only screen and (max-width: 75em) {
+        .bedroom__description__paragraph {
+          width: 80%;
+          font-size: 1.2rem;
+          margin-top: 15rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .bedroom__description__paragraph {
+          font-size: 1.1rem;
+          line-height: 1.5rem; } }
   .bedroom__related {
     height: 100vh; }
 
@@ -280,7 +316,7 @@ body {
       width: 100%;
       position: absolute;
       top: 1.5vh;
-      left: 10%; } }
+      left: 5%; } }
   .sidebar__item {
     list-style: none;
     margin: 14% 0; }

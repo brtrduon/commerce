@@ -16,7 +16,7 @@
         width: 100%;
         position: absolute;
         top: 1.5vh;
-        left: 10%;
+        left: 5%;
     }
 
     &__item {
@@ -57,13 +57,6 @@
         @include respond(tab-land) {
             color: $color-secondary-dark;
         }
-
-        // @include respond(tab-port) {
-        //     font-size: $font-size-small;
-        //     margin: 1rem 0 0 2rem;
-        //     position: relative;
-        //     right: 30%;
-        // }
     }
 }
 
