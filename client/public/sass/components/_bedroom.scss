@@ -5,14 +5,13 @@
     margin: auto;
 
     @include respond(tab-land) {
-        margin-left: -100rem;
+        float: none;
     }
     
     &__details {
         background-color: $color-white;
         height: 95vh;
         margin: 12rem 0;
-
         
         & img {
             width: 50%;
@@ -21,8 +20,9 @@
             right: 3.5%;
                             
             @include respond(tab-land) {
-                width: 70%;
-                top: 0vh;
+                width: 80%;
+                top: -5vh;
+                left: 10%;
             }
         }
 
@@ -32,6 +32,7 @@
             padding: 5rem 1rem 3rem 2rem;
 
             @include respond(tab-land) {
+                width: 90%;
                 padding: 0 1rem 3rem 0;
                 float: none;
             }
@@ -39,6 +40,11 @@
 
         &__title {
             width: 50%;
+
+            @include respond(tab-land) {
+                width: 100%;
+                font-size: 3.4rem;
+            }
         }
 
         &__price {
@@ -64,6 +70,12 @@
             width: 70%;
             float: right;
             z-index: 1;
+
+            @include respond(tab-land) {
+                height: 40vh;
+                width: 100%;
+                float: none;
+            }
         }
 
         &__title {

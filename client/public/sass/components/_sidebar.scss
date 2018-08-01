@@ -5,9 +5,18 @@
     text-align: right;
 
     @include respond(tab-land) {
-        width: 70%;
-        position: fixed;
-        top: 1vh;
+        width: 50%;
+        text-align: center;
+        position: absolute;
+        top: 1.5vh;
+        left: 25%;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+        position: absolute;
+        top: 1.5vh;
+        left: 10%;
     }
 
     &__item {
@@ -15,6 +24,10 @@
         margin: 14% 0;
 
         @include respond(tab-land) {
+            display: inline-block;
+        }
+
+        @include respond(phone) {
             display: inline-block;
         }
     }
@@ -29,15 +42,11 @@
 
         @include respond(tab-land) {
             margin: 1rem 0 0 2rem;
-            font-size: $default-font-size;
             
         }
 
-        @include respond(tab-port) {
+        @include respond(phone) {
             font-size: $font-size-small;
-            // margin: 1rem 0 0 2rem;
-            // position: relative;
-            // right: 30%;
         }
     }
 
