@@ -4,9 +4,19 @@
     top: 30%;
     text-align: right;
 
+    @include respond(tab-land) {
+        width: 70%;
+        position: fixed;
+        top: 1vh;
+    }
+
     &__item {
         list-style: none;
         margin: 14% 0;
+
+        @include respond(tab-land) {
+            display: inline-block;
+        }
     }
 
     &__link {
@@ -15,14 +25,43 @@
         font-family: "Trebuchet MS";
         font-size: $font-size-small;
         letter-spacing: 0.1rem;
+        color: $color-secondary-dark;
+
+        @include respond(tab-land) {
+            margin: 1rem 0 0 2rem;
+            font-size: $default-font-size;
+            
+        }
+
+        @include respond(tab-port) {
+            font-size: $font-size-small;
+            // margin: 1rem 0 0 2rem;
+            // position: relative;
+            // right: 30%;
+        }
     }
 
     &__link:hover {
         color: $color-primary;
         transition: all 0.2s;
+
+        @include respond(tab-land) {
+            color: $color-secondary-dark;
+        }
+
+        // @include respond(tab-port) {
+        //     font-size: $font-size-small;
+        //     margin: 1rem 0 0 2rem;
+        //     position: relative;
+        //     right: 30%;
+        // }
     }
 }
 
 .active {
     color: $color-primary;
+
+    @include respond(tab-land) {
+        color: $color-secondary-dark;
+    }
 }

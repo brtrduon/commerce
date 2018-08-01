@@ -120,6 +120,9 @@ body {
   width: 75%;
   float: right;
   margin: auto; }
+  @media only screen and (max-width: 75em) {
+    .bedroom {
+      margin-left: -100rem; } }
   .bedroom__details {
     background-color: white;
     height: 95vh;
@@ -129,10 +132,18 @@ body {
       position: relative;
       top: 21vh;
       right: 3.5%; }
+      @media only screen and (max-width: 75em) {
+        .bedroom__details img {
+          width: 70%;
+          top: 0vh; } }
     .bedroom__details__text {
       width: 50%;
       float: right;
       padding: 5rem 1rem 3rem 2rem; }
+      @media only screen and (max-width: 75em) {
+        .bedroom__details__text {
+          padding: 0 1rem 3rem 0;
+          float: none; } }
     .bedroom__details__title {
       width: 50%; }
     .bedroom__details__price {
@@ -246,21 +257,43 @@ body {
   position: fixed;
   top: 30%;
   text-align: right; }
+  @media only screen and (max-width: 75em) {
+    .sidebar {
+      width: 70%;
+      position: fixed;
+      top: 1vh; } }
   .sidebar__item {
     list-style: none;
     margin: 14% 0; }
+    @media only screen and (max-width: 75em) {
+      .sidebar__item {
+        display: inline-block; } }
   .sidebar__link {
     text-decoration: none;
     font-weight: 600;
     font-family: "Trebuchet MS";
     font-size: 0.8rem;
-    letter-spacing: 0.1rem; }
+    letter-spacing: 0.1rem;
+    color: #196619; }
+    @media only screen and (max-width: 75em) {
+      .sidebar__link {
+        margin: 1rem 0 0 2rem;
+        font-size: 1.5rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .sidebar__link {
+        font-size: 0.8rem; } }
   .sidebar__link:hover {
     color: #ff6600;
     transition: all 0.2s; }
+    @media only screen and (max-width: 75em) {
+      .sidebar__link:hover {
+        color: #196619; } }
 
 .active {
   color: #ff6600; }
+  @media only screen and (max-width: 75em) {
+    .active {
+      color: #196619; } }
 
 .row {
   max-width: 114rem;
@@ -397,7 +430,7 @@ body {
     color: #ff6600;
     transform: translateX(1rem); }
   .navigation__link--full {
-    color: black;
+    color: #196619;
     font-weight: 700; }
     .navigation__link--full:hover {
       color: #ff6600;

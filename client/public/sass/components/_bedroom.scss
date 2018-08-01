@@ -3,23 +3,38 @@
     width: 75%;
     float: right;
     margin: auto;
+
+    @include respond(tab-land) {
+        margin-left: -100rem;
+    }
     
     &__details {
         background-color: $color-white;
         height: 95vh;
         margin: 12rem 0;
 
+        
         & img {
             width: 50%;
             position: relative;
             top: 21vh;
             right: 3.5%;
+                            
+            @include respond(tab-land) {
+                width: 70%;
+                top: 0vh;
+            }
         }
 
         &__text {
             width: 50%;
             float: right;
             padding: 5rem 1rem 3rem 2rem;
+
+            @include respond(tab-land) {
+                padding: 0 1rem 3rem 0;
+                float: none;
+            }
         }
 
         &__title {
