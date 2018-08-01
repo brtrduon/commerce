@@ -2,6 +2,10 @@
     background-color: $color-tertiary-light;
     padding-left: 5rem;
 
+    @include respond(tab-land) {
+        padding: 0;
+    }
+
     &__title {
         width: 40%;
         text-align: center;
@@ -10,16 +14,32 @@
         padding: 5rem 0 1.5rem 0;
         font-size: 1.8rem;
         font-weight: 700;
+
+        @include respond(tab-land) {
+            line-height: 2.8rem;
+            margin-bottom: 1rem;
+            width: 50%;
+        }
     }
     
     &__list {
         list-style: none;
         border-top: 1px solid $color-grey-light-1;
+
+        @include respond(tab-land) {
+            border-color: transparent;
+        }
     }
     
     &__item {
         display: inline-block;
         padding: 2rem 1.5rem 2rem 0;
+
+        @include respond(tab-land) {
+            display: block;
+            text-align: center;
+            padding: 1rem 0 0 0;
+        }
     }
     
     &__link, &__link:visited {
@@ -31,6 +51,10 @@
 
         &:hover {
             color: $color-primary;
+
+            @include respond(tab-land) {
+                color: $color-secondary-dark;
+            }
         }
     }
 
@@ -40,5 +64,14 @@
         margin: 0 auto;
         text-align: right;
         font-family: arial;
+
+        @include respond(tab-land) {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        @include respond(phone) {
+            font-size: $font-size-small;
+        }
     }
 }
