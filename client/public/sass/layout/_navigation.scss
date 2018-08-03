@@ -1,5 +1,5 @@
 .navigation {
-    display: none;
+    // display: none;
     // remove the display none above to display mobile
 
     &__checkbox {
@@ -79,7 +79,7 @@
         &:hover,
         &:active {
             background-position: 100%;
-            color: $color-primary;
+            color: $color-grey-dark;
             transform: translateX(1rem);
         }
     }
@@ -89,7 +89,7 @@
         font-weight: 700;
 
         &:hover {
-            color: $color-primary;
+            color: $color-grey-dark;
             background-color: $color-grey-light-1;
         }
     }

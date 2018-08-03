@@ -2,8 +2,23 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class Bedroom extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      liked: false
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   componentDidMount() {
     this.jQuery();
+  }
+
+  handleClick() {
+    this.setState({
+      liked: !this.state.liked
+    });
   }
 
   jQuery() {
@@ -54,6 +69,8 @@ class Bedroom extends Component {
   }
 
   render() {
+    const label = this.state.liked ? 'Unlike' : 'Like';
+
     return (
       <div className='section-bedroom'>
         <ul className='sidebar'>
@@ -86,7 +103,9 @@ class Bedroom extends Component {
                   </li>
                 </ul>
               </div>
-              
+              <button className='bedroom__button'onClick={this.handleClick}>
+                {label}
+              </button>
             </div>
           </div>
           <div id='description' className='bedroom__description'>
