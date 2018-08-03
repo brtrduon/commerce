@@ -72,7 +72,7 @@ class Livingroom extends Component {
               <h1 className='bedroom__pageName--h1'>LIVING ROOM</h1>
             </div>
             <div id='details1' className='bedroom__details'>
-              <img src='./../../../img/bedroom.jpg' alt='bedroom.jpg' />
+              <img src='./../../../img/livingroom.jpg' alt='livingroom.jpg' />
               <div className='bedroom__details__text'>
                 <h1 className='bedroom__details__title'>Nudie Extendable Sofa for 3 persons.</h1>
                 <h3 className='bedroom__details__price'><s>$169</s> $149</h3>
@@ -90,7 +90,7 @@ class Livingroom extends Component {
               </div>
             </div>
             <div id='description1' className='bedroom__description'>
-              <img src='./../../../img/bedroom1.jpg' alt='bedroom1.jpg' />
+              <img src='./../../../img/livingroom1.jpg' alt='livingroom1.jpg' />
               <h1 className='bedroom__description__title'><span className='bedroom__description__title-span'>At vero eos et accusamus et iusto odio dignissimos.</span></h1>
               <p className='bedroom__description__paragraph bedroom__description__paragraph'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
