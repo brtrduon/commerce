@@ -38,8 +38,17 @@ class Navigation extends Component {
                                 <div className='navigation__background'>&nbsp;</div>
                                 <nav className='navigation__nav'>
                                     <ul className='navigation__list'>
-                                        <li className='navigation__item' key={0}>
+                                        <li className='navigation__item'>
                                             <a className='navigation__link' href='/'>Home</a>
+                                        </li>
+                                        <li className='navigation__item'>
+                                            <a className='navigation__link' href='/bedroom'>Bedroom</a>
+                                        </li>
+                                        <li className='navigation__item'>
+                                            <a className='navigation__link' href='/livingroom'>Living Room</a>
+                                        </li>
+                                        <li className='navigation__item'>
+                                            <a className='navigation__link' href='/office'>Office</a>
                                         </li>
                                     </ul>
                                 </nav>

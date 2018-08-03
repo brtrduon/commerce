@@ -8,11 +8,7 @@
 
 body {
   box-sizing: border-box;
-  background-image: linear-gradient(
-    to right,
-    rgba($color-white, 0.8),
-    rgba($color-grey-light-1, 0.8)
-  );
+  background-color: $color-grey-light-2;
 }
 
 ::selection {

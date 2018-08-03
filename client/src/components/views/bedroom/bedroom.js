@@ -19,6 +19,8 @@ class Bedroom extends Component {
     };
 
     $(document).ready(() => {
+      // $('.bedroom__details, .bedroom__description, .bedroom__related').css('visibility', 'hidden');
+
       $('a[href^="#"]').on('click', function(e) {
         e.preventDefault();
 
@@ -66,6 +68,9 @@ class Bedroom extends Component {
           </li>
         </ul>
         <div className="bedroom">
+          <div className='bedroom__pageName'>
+            <h1 className='bedroom__pageName--h1'>BEDROOM</h1>
+          </div>
           <div id='details' className='bedroom__details'>
             <img src='./../../../img/bedroom.jpg' alt='bedroom.jpg' />
             <div className='bedroom__details__text'>
@@ -81,6 +86,7 @@ class Bedroom extends Component {
                   </li>
                 </ul>
               </div>
+              
             </div>
           </div>
           <div id='description' className='bedroom__description'>

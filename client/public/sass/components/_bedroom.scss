@@ -6,6 +6,23 @@
 
     @include respond(tab-land) {
         float: none;
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    &__pageName {
+        padding-left: 22%;
+        padding-top: 5%;
+
+        @include respond(phone) {
+            padding: 0;
+        }
+
+        &--h1 {
+            font-weight: 700;
+            color: $color-tertiary-dark;
+            letter-spacing: 0.6rem;
+        }
     }
     
     &__details {

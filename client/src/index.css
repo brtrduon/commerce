@@ -35,7 +35,7 @@
 
 body {
   box-sizing: border-box;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(247, 247, 247, 0.8)); }
+  background-color: #eee; }
 
 ::selection {
   background-color: #ff6600;
@@ -122,7 +122,19 @@ body {
   margin: auto; }
   @media only screen and (max-width: 75em) {
     .bedroom {
-      float: none; } }
+      float: none;
+      width: 100%;
+      padding: 0 5%; } }
+  .bedroom__pageName {
+    padding-left: 22%;
+    padding-top: 5%; }
+    @media only screen and (max-width: 37.5em) {
+      .bedroom__pageName {
+        padding: 0; } }
+    .bedroom__pageName--h1 {
+      font-weight: 700;
+      color: #330080;
+      letter-spacing: 0.6rem; }
   .bedroom__details {
     background-color: white;
     height: 95vh;
