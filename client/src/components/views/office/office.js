@@ -2,8 +2,20 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class Office extends Component {
-    componentDidMount() {
+    constructor() {
+      super();
+
+      this.state = {
+        liked: false
+      };
+      this.handleClick = this.handleClick.bind(this);
       this.jQuery();
+    }
+
+    handleClick() {
+      this.setState({
+        liked: true
+      });
     }
   
     jQuery() {
@@ -54,6 +66,8 @@ class Office extends Component {
     }
   
     render() {
+      const label = this.state.liked ? 'Liked' : 'Like';
+      
       return (
         <div className='section-office'>
           <ul className='sidebar'>
@@ -86,7 +100,9 @@ class Office extends Component {
                     </li>
                   </ul>
                 </div>
-                
+                <button className='bedroom__button'onClick={this.handleClick} disabled={this.state.liked}>
+                {label}
+              </button>
               </div>
             </div>
             <div id='description0' className='bedroom__description'>

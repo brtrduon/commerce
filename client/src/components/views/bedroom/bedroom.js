@@ -9,15 +9,12 @@ class Bedroom extends Component {
       liked: false
     };
     this.handleClick = this.handleClick.bind(this);
-  }
-
-  componentDidMount() {
     this.jQuery();
   }
 
   handleClick() {
     this.setState({
-      liked: !this.state.liked
+      liked: true
     });
   }
 
@@ -69,7 +66,7 @@ class Bedroom extends Component {
   }
 
   render() {
-    const label = this.state.liked ? 'Unlike' : 'Like';
+    const label = this.state.liked ? 'Liked' : 'Like';
 
     return (
       <div className='section-bedroom'>
@@ -103,7 +100,7 @@ class Bedroom extends Component {
                   </li>
                 </ul>
               </div>
-              <button className='bedroom__button'onClick={this.handleClick}>
+              <button className='bedroom__button'onClick={this.handleClick} disabled={this.state.liked}>
                 {label}
               </button>
             </div>
