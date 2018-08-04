@@ -21,7 +21,7 @@ class Bedroom extends Component {
   jQuery() {
     // viewport check
     $.fn.isInViewport = function() {
-      var elementTop = $(this).offset().top + 600;
+      var elementTop = $(this).offset().top + 450;
       var elementBottom = elementTop + $(this).outerHeight();
   
       var viewportTop = $(window).scrollTop();
@@ -117,31 +117,22 @@ class Bedroom extends Component {
             </p>
           </div>
           <div id='related' className='bedroom__related'>
+            <h2 className='bedroom__related__title'>Related</h2>
             <div className='row'>
             {/* card 1 */}
               <div className='col-1-of-2'>
-                <div className='bedroom__related__side bedroom__related__side--front'>
-                  <div className='bedroom__related__img'>
-                    <img src='./../../../img/livingroom.gif' alt='livingroom.gif' />
-                  </div>
-                </div>
-                <div className='bedroom__related__side bedroom__related__side--back bedroom__related__side--back-1'>
-                  <div className='bedroom__related__cta'>
-                    <a href='/livingroom'>Living Room</a>
-                  </div>
+                <div className='bedroom__related__card'>
+                  <a href='/livingroom'>
+                    <img src='./../../../img/livingroom.gif' alt='livingroom.gif' className='bedroom__related__img'/>
+                  </a>
                 </div>
               </div>
               {/* card 2 */}
               <div className='col-1-of-2'>
-                <div className='bedroom__related__side bedroom__related__side--front'>
-                  <div className='bedroom__related__img'>
-                    <img src='./../../../img/office.gif' alt='office.gif' />
-                  </div>
-                </div>
-                <div className='bedroom__related__side bedroom__related__side--back bedroom__related__side--back-2'>
-                  <div className='bedroom__related__cta'>
-                    <a href='/livingroom'>Living Room</a>
-                  </div>
+                <div className='bedroom__related__card'>
+                  <a href='/office'>
+                    <img src='./../../../img/office.gif' alt='office.gif' className='bedroom__related__img'/>
+                  </a>
                 </div>
               </div>
             </div>

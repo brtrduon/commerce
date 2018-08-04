@@ -173,40 +173,24 @@
     }
 
     &__related {
-        perspective: 150rem;
-        -moz-perspective: 150rem;
-        height: 100vh;
+        height: 70vh;
+        background-color: $color-white;
         opacity: 0.001;
-        position: relative;
+        margin-bottom: 15rem;
 
-        &__side {
+        &__title {
             font-size: 2rem;
-            // height: 52rem;
-            transition: all 0.8s ease;
-            position: absolute;
-            top: 0;
-            left: 0;
-            // width: 100%;
-            backface-visibility: hidden;
-            // border-radius: 3px;
-            // overflow: hidden;
-            box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-
-            &--front {
-                background-color: $color-white;
-            }
-
-            &--back-1 {
-
-            }
-
-            &--back-2 {
-
-            }
+            font-weight: 700;
+            letter-spacing: 0.3rem;
+            text-align: left;
+            padding: 4rem 0 3rem 2rem;
         }
         
-        &__cta {
-
+        &__img {
+            width: 100%;
+            border: 1px solid $color-grey-dark-2;
+            max-width: 35rem;
+            box-shadow: $default-box-shadow;
         }
     }
 }

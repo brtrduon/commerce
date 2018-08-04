@@ -244,21 +244,21 @@ body {
           font-size: 1.1rem;
           line-height: 1.5rem; } }
   .bedroom__related {
-    perspective: 150rem;
-    -moz-perspective: 150rem;
-    height: 100vh;
+    height: 70vh;
+    background-color: white;
     opacity: 0.001;
-    position: relative; }
-    .bedroom__related__side {
+    margin-bottom: 15rem; }
+    .bedroom__related__title {
       font-size: 2rem;
-      transition: all 0.8s ease;
-      position: absolute;
-      top: 0;
-      left: 0;
-      backface-visibility: hidden;
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
-      .bedroom__related__side--front {
-        background-color: white; }
+      font-weight: 700;
+      letter-spacing: 0.3rem;
+      text-align: left;
+      padding: 4rem 0 3rem 2rem; }
+    .bedroom__related__img {
+      width: 100%;
+      border: 1px solid #999;
+      max-width: 35rem;
+      box-shadow: 0.1rem 0.2rem 0.4rem rgba(0, 0, 0, 0.6); }
 
 .showTitle {
   opacity: 1;
