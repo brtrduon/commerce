@@ -39,6 +39,7 @@
         font-size: $font-size-small;
         letter-spacing: 0.1rem;
         color: $color-secondary-dark;
+        text-shadow: $default-text-shadow;
 
         @include respond(tab-land) {
             margin: 1rem 0 0 2rem;

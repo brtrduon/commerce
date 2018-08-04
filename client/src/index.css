@@ -128,7 +128,8 @@ body {
   .bedroom__pageName {
     padding-left: 22%;
     padding-top: 5%;
-    opacity: 0; }
+    opacity: 0;
+    text-shadow: 1px 1px 2px black, 0 0 10px black; }
     @media only screen and (max-width: 37.5em) {
       .bedroom__pageName {
         padding: 0; } }
@@ -140,12 +141,14 @@ body {
     background-color: white;
     height: 100vh;
     margin: 12rem 0;
+    box-shadow: 0.1rem 0.2rem 0.4rem rgba(0, 0, 0, 0.6);
     opacity: 0; }
     .bedroom__details img {
       width: 50%;
       position: relative;
       top: 21vh;
-      right: 3.5%; }
+      right: 3.5%;
+      box-shadow: 0.1rem 0.2rem 0.4rem rgba(0, 0, 0, 0.6); }
       @media only screen and (max-width: 75em) {
         .bedroom__details img {
           width: 80%;
@@ -194,7 +197,8 @@ body {
       height: 70vh;
       width: 70%;
       float: right;
-      z-index: 1; }
+      z-index: 1;
+      box-shadow: 0.1rem 0.2rem 0.4rem rgba(0, 0, 0, 0.6); }
       @media only screen and (max-width: 75em) {
         .bedroom__description img {
           height: 40vh;
@@ -214,12 +218,14 @@ body {
       .bedroom__description__title-span {
         background-image: linear-gradient(to right, white, #f7f7f7);
         position: absolute;
-        padding: 0.5rem 2rem 1.5rem 0; }
+        padding: 0.5rem 2rem 1.5rem 0;
+        box-shadow: 0.1rem 0.2rem 0.4rem rgba(0, 0, 0, 0.6); }
         @media only screen and (max-width: 75em) {
           .bedroom__description__title-span {
             font-size: 3rem;
             background-image: none;
-            padding: 0; } }
+            padding: 0;
+            box-shadow: none; } }
         @media only screen and (max-width: 37.5em) {
           .bedroom__description__title-span {
             font-size: 2.3rem;
@@ -238,8 +244,21 @@ body {
           font-size: 1.1rem;
           line-height: 1.5rem; } }
   .bedroom__related {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
     height: 100vh;
-    opacity: 0.001; }
+    opacity: 0.001;
+    position: relative; }
+    .bedroom__related__side {
+      font-size: 2rem;
+      transition: all 0.8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .bedroom__related__side--front {
+        background-color: white; }
 
 .showTitle {
   opacity: 1;
@@ -356,7 +375,8 @@ body {
     font-family: "Trebuchet MS";
     font-size: 0.8rem;
     letter-spacing: 0.1rem;
-    color: #196619; }
+    color: #196619;
+    text-shadow: 0.5px 0.5px 0.5px black; }
     @media only screen and (max-width: 75em) {
       .sidebar__link {
         margin: 1rem 0 0 2rem; } }
