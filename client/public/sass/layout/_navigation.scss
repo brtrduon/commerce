@@ -1,35 +1,30 @@
+.nav-img {
+    max-height: 4rem;
+    max-width: 5rem;
+    position: absolute;
+    left: 5%;
+}
+
 .navigation {
-    // display: none;
-    // remove the display none above to display mobile
+    visibility: hidden;
+
+    @include respond(tab-port) {
+        visibility: visible;
+    }
 
     &__checkbox {
         display: none;
     }
 
     &__button {
-        background-color: $color-white;
         height: 5rem;
         width: 5rem;
         position: fixed;
-        top: 5rem;
-        right: 5rem;
-        border-radius: 50%;
+        right: 2rem;
+        top: -0.4rem;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
         text-align: center;
         cursor: pointer;
-    }
-
-    &__background {
-        height: 5rem;
-        width: 5rem;
-        border-radius: 50%;
-        position: fixed;
-        top: 5rem;
-        right: 5rem;
-        background-image: radial-gradient($color-grey-light-1, $color-grey-dark);
-        z-index: 1000;
-        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
     &__nav {
@@ -49,7 +44,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         list-style: none;
-        text-align: center;
+        text-align: left;
     }
 
     &__item {
@@ -76,7 +71,6 @@
             }
         }
 
-        &:hover,
         &:active {
             background-position: 100%;
             color: $color-grey-dark;
@@ -87,11 +81,6 @@
     &__link--full {
         color: $color-secondary-dark;
         font-weight: 700;
-
-        &:hover {
-            color: $color-grey-dark;
-            background-color: $color-grey-light-1;
-        }
     }
 
     // functionality
@@ -135,11 +124,11 @@
         }
     }
 
-    &__button:hover &__icon::before {
+    &__icon::before {
         top: -1rem;
     }
 
-    &__button:hover &__icon::after {
+    &__icon::after {
         top: 1rem;
     }
 
