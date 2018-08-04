@@ -31,7 +31,8 @@ class Livingroom extends Component {
       };
   
       $(document).ready(() => {
-        // $('.bedroom__details, .bedroom__description, .bedroom__related').css('visibility', 'hidden');
+        $('.bedroom__pageName').addClass('showTitle');
+        $('.bedroom__details').addClass('show');
   
         $('a[href^="#"]').on('click', function(e) {
           e.preventDefault();
@@ -48,20 +49,20 @@ class Livingroom extends Component {
       $(window).scroll(() => {
         if ($('#details1').isInViewport()) {
           $('.sidebar__link--details').addClass('active');
-          $('.sidebar__link--description').removeClass('active');
-          $('.sidebar__link--related').removeClass('active');
+          $('.sidebar__link--description, .sidebar__link--related').removeClass('active');
         }
         if ($('#description1').isInViewport()) {
-          $('.sidebar__link--details').removeClass('active');
+          $('.sidebar__link--details, .sidebar__link--related').removeClass('active');
           $('.sidebar__link--description').addClass('active');
-          $('.sidebar__link--related').removeClass('active');
+  
+          $('.bedroom__description').addClass('show');
         }
         if ($('#related1').isInViewport()) {
-          $('.sidebar__link--details').removeClass('active');
-          $('.sidebar__link--description').removeClass('active');
+          $('.sidebar__link--details, .sidebar__link--description').removeClass('active');
           $('.sidebar__link--related').addClass('active');
+  
+          $('.bedroom__related').addClass('show');
         }
-        
       });
     }
   

@@ -127,7 +127,8 @@ body {
       padding: 0 5%; } }
   .bedroom__pageName {
     padding-left: 22%;
-    padding-top: 5%; }
+    padding-top: 5%;
+    opacity: 0; }
     @media only screen and (max-width: 37.5em) {
       .bedroom__pageName {
         padding: 0; } }
@@ -137,8 +138,9 @@ body {
       letter-spacing: 0.6rem; }
   .bedroom__details {
     background-color: white;
-    height: 95vh;
-    margin: 12rem 0; }
+    height: 100vh;
+    margin: 12rem 0;
+    opacity: 0; }
     .bedroom__details img {
       width: 50%;
       position: relative;
@@ -186,7 +188,8 @@ body {
           width: 15rem; } }
   .bedroom__description {
     height: 100vh;
-    overflow: hidden; }
+    overflow: hidden;
+    opacity: 0.001; }
     .bedroom__description img {
       height: 70vh;
       width: 70%;
@@ -235,7 +238,16 @@ body {
           font-size: 1.1rem;
           line-height: 1.5rem; } }
   .bedroom__related {
-    height: 100vh; }
+    height: 100vh;
+    opacity: 0.001; }
+
+.showTitle {
+  opacity: 1;
+  transition: 1s; }
+
+.show {
+  opacity: 1;
+  transition: 3s; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
