@@ -9,12 +9,14 @@ class Bedroom extends Component {
       liked: false
     };
     this.handleClick = this.handleClick.bind(this);
+
     this.jQuery();
   }
 
   handleClick() {
     this.setState({
       liked: true
+      
     });
   }
 
@@ -121,7 +123,7 @@ class Bedroom extends Component {
             <div className='row'>
             {/* card 1 */}
               <div className='col-1-of-2'>
-                <div className='bedroom__related__card'>
+                <div className='bedroom__related__card-1'>
                   <a href='/livingroom'>
                     <img src='./../../../img/livingroom.gif' alt='livingroom.gif' className='bedroom__related__img'/>
                   </a>
@@ -129,7 +131,7 @@ class Bedroom extends Component {
               </div>
               {/* card 2 */}
               <div className='col-1-of-2'>
-                <div className='bedroom__related__card'>
+                <div className='bedroom__related__card-2'>
                   <a href='/office'>
                     <img src='./../../../img/office.gif' alt='office.gif' className='bedroom__related__img'/>
                   </a>

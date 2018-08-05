@@ -114,7 +114,25 @@ class Livingroom extends Component {
               </p>
             </div>
             <div id='related1' className='bedroom__related'>
-              <h1>Related</h1>
+              <h2 className='bedroom__related__title'>Related</h2>
+              <div className='row'>
+              {/* card 1 */}
+                <div className='col-1-of-2'>
+                  <div className='bedroom__related__card-1'>
+                    <a href='/bedroom'>
+                      <img src='./../../../img/bedroom.gif' alt='bedroom.gif' className='bedroom__related__img'/>
+                    </a>
+                  </div>
+                </div>
+                {/* card 2 */}
+                <div className='col-1-of-2'>
+                  <div className='bedroom__related__card-2'>
+                    <a href='/office'>
+                      <img src='./../../../img/office.gif' alt='office.gif' className='bedroom__related__img'/>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className='footer'>
               <h1 className='footer__title'>FURNISHING YOUR DREAMS</h1>

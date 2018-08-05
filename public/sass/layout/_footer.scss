@@ -14,6 +14,7 @@
         padding: 5rem 0 1.5rem 0;
         font-size: 1.8rem;
         font-weight: 700;
+        text-shadow: $default-text-shadow;
 
         @include respond(tab-land) {
             line-height: 2.8rem;
@@ -61,6 +62,7 @@
     &__copyright {
         border-top: 1px solid $color-grey-light-1;
         padding-top: 2rem;
+        padding-right: 0.5rem;
         margin: 0 auto;
         text-align: right;
         font-family: arial;
