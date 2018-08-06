@@ -5,17 +5,38 @@ class Livingroom extends Component {
     constructor() {
       super();
 
-      this.state = {
-        liked: false
-      };
-      this.handleClick = this.handleClick.bind(this);
+      // need this logic since localStorage only saves as string
+      var local = localStorage.getItem('livingroom');
+      if (local === 'false') {
+        this.state = {
+          liked: true
+        }
+      }
+      else if (local === 'true') {
+        this.state = {
+          liked: false
+        }
+      }
+
+      else {
+        this.state = {
+          liked: false
+        }
+      }
+      // end of localStorage logic
+
       this.jQuery();
+      this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
       this.setState({
-        liked: true
+        liked: !this.state.liked
       });
+
+      // console.log(this.state.liked);
+
+      localStorage.setItem('livingroom', this.state.liked);
     }
   
     jQuery() {
@@ -67,7 +88,7 @@ class Livingroom extends Component {
     }
   
     render() {
-      const label = this.state.liked ? 'Liked' : 'Like';
+      const label = this.state.liked ? 'Unlike' : 'Like';
 
       return (
         <div className='section-livingroom'>
@@ -101,7 +122,7 @@ class Livingroom extends Component {
                     </li>
                   </ul>
                 </div>
-                <button className='bedroom__button'onClick={this.handleClick} disabled={this.state.liked}>
+                <button className='bedroom__details__button' onClick={this.handleClick}>
                 {label}
               </button>
               </div>

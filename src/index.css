@@ -1,31 +1,3 @@
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
 *,
 *::after,
 *::before {
@@ -90,30 +62,6 @@ body {
   font-size: 1.5rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
-
-.u-center-text {
-  text-align: center !important; }
-
-.u-margin-bottom-small {
-  margin-bottom: 1.5rem !important; }
-
-.u-margin-bottom-medium {
-  margin-bottom: 4rem !important; }
-  @media only screen and (max-width: 56.25em) {
-    .u-margin-bottom-medium {
-      margin-bottom: 3rem !important; } }
-
-.u-margin-bottom-big {
-  margin-bottom: 8rem !important; }
-  @media only screen and (max-width: 56.25em) {
-    .u-margin-bottom-big {
-      margin-bottom: 5rem !important; } }
-
-.u-margin-top-big {
-  margin-top: 8rem !important; }
-
-.u-margin-top-huge {
-  margin-top: 10rem !important; }
 
 .bedroom {
   position: relative;
@@ -189,6 +137,16 @@ body {
       @media only screen and (max-width: 75em) {
         .bedroom__details__assembly {
           width: 15rem; } }
+    .bedroom__details__button {
+      height: 2.5rem;
+      width: 5rem;
+      font-family: sans-serif;
+      font-weight: 700;
+      background-color: #33cc33;
+      border-radius: 0.2rem;
+      margin-top: 2rem; }
+    .bedroom__details__button:focus {
+      background-color: #33cc33; }
   .bedroom__description {
     height: 100vh;
     overflow: hidden;
@@ -279,6 +237,11 @@ body {
         .bedroom__related__img {
           max-width: 40rem;
           width: 90%; } }
+      @media only screen and (max-width: 37.5em) {
+        .bedroom__related__img {
+          width: 20rem;
+          position: relative;
+          right: 8rem; } }
       .bedroom__related__img:hover {
         width: 85%; }
         @media only screen and (max-width: 56.25em) {
