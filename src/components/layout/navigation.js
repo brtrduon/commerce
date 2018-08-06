@@ -7,7 +7,9 @@ class Navigation extends Component {
                 <nav>
                     <div className='nav-wrapper white'>
                         <div className='row'>
-                            <img src='./../../../img/logo.jpg' alt='logo.jpg' className='nav-img left' />
+                            <a href='/'>
+                                <img src='./../../../img/logo.jpg' alt='logo.jpg' className='nav-img left' />
+                            </a>
                             <ul className='right hide-on-med-and-down'>
                                 <li><a className='navigation__link--full' href='/'>Home</a></li>
                                 <li><a className='navigation__link--full' href='/bedroom'>Bedroom</a></li>

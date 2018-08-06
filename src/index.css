@@ -249,6 +249,10 @@ body {
     opacity: 0.001;
     margin-bottom: 20rem;
     padding: 0 7rem; }
+    @media only screen and (max-width: 56.25em) {
+      .bedroom__related {
+        height: 95vh;
+        padding: 2rem 7rem; } }
     .bedroom__related__title {
       font-size: 2rem;
       font-weight: 700;
@@ -256,16 +260,30 @@ body {
       text-shadow: 0.5px 0.5px 0.5px black;
       text-align: left;
       padding: 4rem 0 3rem 0; }
+      @media only screen and (max-width: 56.25em) {
+        .bedroom__related__title {
+          text-align: center;
+          font-size: 2.2rem; } }
     .bedroom__related__card-1 {
       border-right: 1px solid #777; }
+      @media only screen and (max-width: 56.25em) {
+        .bedroom__related__card-1 {
+          border: none; } }
     .bedroom__related__img {
       width: 80%;
       border: 1px solid #999;
       max-width: 35rem;
       box-shadow: 0.1rem 0.2rem 0.4rem rgba(0, 0, 0, 0.6);
       transition: all 0.2s; }
+      @media only screen and (max-width: 56.25em) {
+        .bedroom__related__img {
+          max-width: 40rem;
+          width: 90%; } }
       .bedroom__related__img:hover {
         width: 85%; }
+        @media only screen and (max-width: 56.25em) {
+          .bedroom__related__img:hover {
+            width: 90%; } }
 
 .showTitle {
   opacity: 1;
